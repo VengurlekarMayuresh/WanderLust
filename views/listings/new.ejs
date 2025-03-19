@@ -1,0 +1,40 @@
+<% layout("/layouts/boiler") %>
+<h2 class="new-head">Create a new Listing</h2>
+<body>
+    <div class="row mb-3 col-8 offset-2">
+        <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div>
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="listing[title]" class="form-control" placeholder="Add the title" required><br>
+            </div>
+            <div>
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" required placeholder="Add your Description here" class="form-control"></textarea><br>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" name="listing[price]" placeholder="Enter the price here" class="form-control"><br>
+                </div>
+                <div class="col-md-8">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="listing[location]" placeholder="Add location here" class="form-control"><br>
+                </div>
+            </div>
+            <!-- <div>
+                <label for="image" class="form-label">Image URL</label>
+                <input type="text" name="listing[image][url]" placeholder="Enter Image URL/link" class="form-control"><br>
+            </div> -->
+            <div>
+                <label for="image" class="form-label">Upload Image</label>
+                <input type="file" name="listing[image]" placeholder="Choose Image" class="form-control" required><br>
+            </div>
+            <div>
+                <label for="country" class="form-label">Country</label>
+                <input type="text" name="listing[country]" placeholder="Add country here" class="form-control"><br>
+            </div>
+            <br><br>
+            <button class="btn cst-btn">Submit</button>
+        </form>
+    </div>
+</body>
